@@ -1,2 +1,2 @@
 # Instagram-Clone
-Creating my version of Instagram using Django
+Creating a replica of Instagram using Django for the backend development.
