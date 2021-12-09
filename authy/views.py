@@ -3,12 +3,17 @@ from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.models import User
-from authy.models import Profile
+# from authy.models import Profile
 from django.core.paginator import Paginator
 from django.urls import resolve, reverse
 
 # Create your views here.
 
+def login(request):
+    context = {}
+    return render(request, 'user/login.html', context)
+
+""""
 def UserProfile(request, username):
     user = get_object_or_404(User, username=username)
     profile = Profile.objects.get(user=user)
@@ -47,3 +52,4 @@ def UserProfile(request, username):
 
     return HttpResponse(template.render(context, request))
 
+"""
